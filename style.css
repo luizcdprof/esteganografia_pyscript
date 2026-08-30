@@ -1,0 +1,193 @@
+:root {
+    --bg-color: #030712;
+    --card-bg: #091220;
+    --neon-blue: #00f0ff;
+    --neon-bright: #3b82f6;
+    --text-color: #f8fafc;
+    --text-muted: #93c5fd;
+    --border-glow: rgba(0, 240, 255, 0.35);
+    
+    --font-title: 'Share Tech Mono', monospace;
+    --font-body: 'Rajdhani', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.neon-title {
+    font-family: var(--font-title);
+    color: #ffffff;
+    text-align: center;
+    font-size: 2.3rem;
+    letter-spacing: 4px;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px var(--neon-blue),
+        0 0 35px var(--neon-blue),
+        0 0 50px var(--neon-blue);
+}
+
+.card-info, .card-formulario {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-glow);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+}
+
+.card-info h2, .card-formulario h3 {
+    font-family: var(--font-title);
+    color: var(--neon-blue);
+    margin-top: 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-info p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+textarea, input[type="file"] {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid var(--neon-blue);
+    background-color: #020617;
+    color: #fff;
+    font-family: var(--font-body);
+    box-sizing: border-box;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    box-shadow: 0 0 12px var(--neon-blue);
+}
+
+.grid-botoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-acao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    background-color: #041026;
+    border: 2px solid var(--neon-blue);
+    border-radius: 10px;
+    color: #fff;
+    font-family: var(--font-title);
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.15);
+}
+
+.btn-acao .material-symbols-outlined {
+    font-size: 2.5rem;
+    margin-bottom: 0.4rem;
+    color: var(--neon-blue);
+}
+
+.btn-acao:hover {
+    background-color: var(--neon-blue);
+    color: #000;
+    box-shadow: 0 0 25px var(--neon-blue);
+    transform: translateY(-3px);
+}
+
+.btn-acao:hover .material-symbols-outlined {
+    color: #000;
+    transform: scale(1.1);
+}
+
+.resultado {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #020617;
+    border-radius: 6px;
+    border-left: 4px solid var(--neon-blue);
+    word-break: break-all;
+}
+
+.resultado p {
+    font-family: var(--font-title);
+    margin: 0.5rem 0 0 0;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+a.btn-download {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: var(--neon-blue);
+    color: #000;
+    font-family: var(--font-title);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+a.btn-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: var(--neon-blue);
+    color: #030712;
+    font-family: var(--font-title);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+a.btn-download:hover {
+    background-color: #ffffff;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+}
