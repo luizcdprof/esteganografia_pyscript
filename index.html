@@ -29,49 +29,51 @@
         <div class="container">
             <h1 class="neon-title">ESTEGANOGRAFIA</h1>
 
-            <!-- Seção de Explicação -->
-            <div class="card-info">
-                <h2>
-                    <span class="material-symbols-outlined icon-align">visibility_off</span>
-                    O que é Esteganografia?
-                </h2>
-                <p>
-                    Diferente da criptografia (que embaralha a mensagem), a <strong>Esteganografia</strong> esconde a própria existência da informação. 
-                    Esta ferramenta altera o bit menos significativo (LSB) do canal de cor de cada pixel de uma imagem para ocultar seu texto sem alterar a imagem visualmente.
-                </p>
-            </div>
-
-            <!-- Seção do Formulário -->
-            <div class="card-formulario">
-                <label for="imagemInput">Selecione uma Imagem (PNG):</label>
-                <input type="file" id="imagemInput" accept="image/png, image/jpeg">
-
-                <div class="preview-area">
-                    <canvas id="canvasPreview" style="display:none;"></canvas>
+            <div class="grid-main">
+                <!-- Seção de Explicação -->
+                <div class="card-info">
+                    <h2>
+                        <span class="material-symbols-outlined icon-align">visibility_off</span>
+                        O que é Esteganografia?
+                    </h2>
+                    <p>
+                        Diferente da criptografia (que embaralha a mensagem), a <strong>Esteganografia</strong> esconde a própria existência da informação. 
+                        Esta ferramenta altera o bit menos significativo (LSB) do canal de cor de cada pixel de uma imagem para ocultar seu texto sem alterar a imagem visualmente.
+                    </p>
                 </div>
 
-                <label for="textoOculto">Mensagem Secreta:</label>
-                <textarea id="textoOculto" rows="3" placeholder="Digite a mensagem para esconder..."></textarea>
+                <!-- Seção do Formulário -->
+                <div class="card-formulario">
+                    <label for="imagemInput">Selecione uma Imagem (PNG):</label>
+                    <input type="file" id="imagemInput" accept="image/png, image/jpeg">
 
-                <label>Ações:</label>
-                <div class="grid-botoes">
-                    <button class="btn-acao btn-esconder" py-click="processar_ocultar">
-                        <span class="material-symbols-outlined">key_off</span>
-                        <span>Ocultar Texto na Imagem</span>
-                    </button>
-                    <button class="btn-acao btn-revelar" py-click="processar_revelar">
-                        <span class="material-symbols-outlined">saved_search</span>
-                        <span>Revelar Texto Oculto</span>
-                    </button>
-                </div>
+                    <div class="preview-area">
+                        <canvas id="canvasPreview" style="display:none;"></canvas>
+                    </div>
 
-                <div class="resultado">
-                    <h3>
-                        <span class="material-symbols-outlined icon-align">terminal</span>
-                        Resultado / Mensagem Revelada:
-                    </h3>
-                    <p id="saida">Selecione uma imagem e clique em uma ação...</p>
-                    <div id="downloadContainer" style="margin-top: 10px;"></div>
+                    <label for="textoOculto">Mensagem Secreta:</label>
+                    <textarea id="textoOculto" rows="3" placeholder="Digite a mensagem para esconder..."></textarea>
+
+                    <label>Ações:</label>
+                    <div class="grid-botoes">
+                        <button class="btn-acao btn-esconder" py-click="processar_ocultar">
+                            <span class="material-symbols-outlined">key_off</span>
+                            <span>Ocultar Texto na Imagem</span>
+                        </button>
+                        <button class="btn-acao btn-revelar" py-click="processar_revelar">
+                            <span class="material-symbols-outlined">saved_search</span>
+                            <span>Revelar Texto Oculto</span>
+                        </button>
+                    </div>
+
+                    <div class="resultado">
+                        <h3>
+                            <span class="material-symbols-outlined icon-align">terminal</span>
+                            Resultado / Mensagem Revelada:
+                        </h3>
+                        <p id="saida">Selecione uma imagem e clique em uma ação...</p>
+                        <div id="downloadContainer" style="margin-top: 10px;"></div>
+                    </div>
                 </div>
             </div>
         </div>
