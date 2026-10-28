@@ -218,6 +218,11 @@ a.btn-download:hover {
         padding: 1.75rem;
     }
 
+    .card-info p {
+        font-size: 1.5rem; 
+        line-height: 1.7;
+    }
+
     .btn-acao {
         min-height: 105px;
         font-size: 0.9rem;
